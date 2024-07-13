@@ -1,0 +1,113 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #a18cd1, #fbc2eb); /* Soothing background gradient */
+    font-family: Arial, sans-serif; /* Nice, clean font */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Increased spacing between the boxes */
+}
+
+.box1, .box2, .box3 {
+    width: 400px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white for glassmorphism effect */
+    backdrop-filter: blur(15px); /* Increased blur effect for better glassmorphism */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* Larger text inside the boxes */
+    color: #333; /* Dark text color */
+}
+.triangle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 100%;
+    border: solid white 10px;
+    transform: translate(-50%, -50%); /* Center the triangle */
+    animation: rotate 10s linear infinite; /* Rotate the triangle */
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #333;
+    width: 300px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.dropdown-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown-content {
+    width: 300px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    backdrop-filter: blur(10px);
+}
+
+.option {
+    padding: 12px 16px;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+}
+
+.option:hover {
+    background-color: rgba(200, 200, 200, 0.3);
+
+}
+.option.selected {
+    background-color: rgba(100, 100, 255, 0.5);
+    color: white;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#but{
+    margin-top: 490%;
+    margin-left: -5%;
+    height: 35px;
+    width: 90px;
+}
